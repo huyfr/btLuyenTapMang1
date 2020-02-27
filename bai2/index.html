@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+    <div>
+        <p>10 so ngau nhien:</p>
+        <p id="original"></p>
+        <p>So lon nhat trong 10 so:</p>
+        <p id="result"></p>
+        <p></p>
+    </div>
+
+    <script>
+        let arr=[];
+        let result=[];
+        let number;
+        for (let i=0; i<10; i++)
+        {
+            number=Math.floor(Math.random()*100);
+            arr.push(number);
+        }
+        document.getElementById("original").innerHTML = arr;
+        let max=arr[0];
+        let index=0;
+        for (let i=0; i<10; i++)
+        {
+            if (max<arr[i])
+            {
+                max=arr[i];
+                index=i;
+            }
+        }
+        document.getElementById("result").innerHTML ="Max: "+max+"<br>"+" Index: "+index;
+    </script>
+</body>
+</html>

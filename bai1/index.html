@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+    <div>
+        <p>10 so random ngau nhien trong 100 so:</p>
+        <p id="original"></p>
+        <p>Nhung so lon hon 10:</p>
+        <p id="result"></p>
+    </div>
+<script>
+    let arr = [];
+    let result=[];
+    let number;
+    for (let i=0; i<10; i++)
+    {
+        number=Math.floor(Math.random()*100);
+        arr.push(number);
+    }
+    document.getElementById("original").innerHTML = arr;
+    for (let i=0; i<10; i++)
+    {
+        if (arr[i]>10)
+        {
+            result.push(arr[i]);
+        }
+    }
+    document.getElementById("result").innerHTML = result;
+</script>
+</body>
+</html>
