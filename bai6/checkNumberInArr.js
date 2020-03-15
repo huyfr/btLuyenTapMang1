@@ -1,9 +1,10 @@
 let arr=[];
+let number;
 
 function randomNumber()
 {
     arr=[];
-    let number;
+    number;
     let input=document.getElementById("randomNumber").value;
     if (input<=0 || isNaN(input))
     {
@@ -23,11 +24,11 @@ function randomNumber()
 }
 function checkInput()
 {
-    let number=parseInt(document.getElementById("inputNumber").value);
+    let input=parseInt(document.getElementById("inputNumber").value);
     let check;
     for (let i=0; i<number; i++)
     {
-        if (number===arr[i])
+        if (input===arr[i])
         {
             check=1;
         }
